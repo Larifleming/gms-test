@@ -1,9 +1,14 @@
-///<reference type="cypress"/>
+///<reference types="cypress"/>
 
 describe('US-012-Funcionalidade: Cadastro de membros', () => {
   beforeEach (() => { 
     cy.visit('/')
   });
+
+  afterEach (() => {
+    cy.screenshot()
+
+});
 
   it('Deve fazer o cadastro de campos obrigatórios', () => {
     var email = `larissa${Date.now()}@teste.com`

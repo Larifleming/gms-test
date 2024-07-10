@@ -1,8 +1,13 @@
-///<reference type="cypress"/>
+///<reference types="cypress"/>
 
     describe('US-00 : Funcionalidade: Busca de filmes', () => {
     beforeEach (() => { 
     cy.visit ('/')
+    });
+
+    afterEach (() => {
+        cy.screenshot()
+
     });
 
     it('Deve buscar filme com sucesso', () => {
